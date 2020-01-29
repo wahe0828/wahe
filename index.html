@@ -66,8 +66,8 @@
   
     <article id="post-我的另一个足记" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/12/27/%E6%88%91%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%B6%B3%E8%AE%B0/" class="article-date">
-  <time datetime="2019-12-27T14:00:21.000Z" itemprop="datePublished">2019-12-27</time>
+    <a href="/2019/12/28/%E6%88%91%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%B6%B3%E8%AE%B0/" class="article-date">
+  <time datetime="2019-12-28T14:00:21.000Z" itemprop="datePublished">2019-12-28</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/27/%E6%88%91%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%B6%B3%E8%AE%B0/">我的另一个足记</a>
+      <a class="article-title" href="/2019/12/28/%E6%88%91%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%B6%B3%E8%AE%B0/">自制博客常用命令总结</a>
     </h1>
   
 
@@ -86,25 +86,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="git常用指令总结"><a href="#git常用指令总结" class="headerlink" title="git常用指令总结"></a>git常用指令总结</h1><h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><!-- ### 克隆远程版本库 -->
-
-<blockquote>
-<p>克隆远程版本库</p>
-<blockquote>
-<p>git clone <url></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>克隆远程版本库</p>
-<blockquote>
-<p>git clone <url></p>
-</blockquote>
-</blockquote>
+        <h2 id="Markdown常用语法总结"><a href="#Markdown常用语法总结" class="headerlink" title="Markdown常用语法总结"></a>Markdown常用语法总结</h2><h2 id="hexo常用语法"><a href="#hexo常用语法" class="headerlink" title="hexo常用语法"></a>hexo常用语法</h2><ol>
+<li><p>更新public文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>本地文件开服务器预览</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/27/%E6%88%91%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%B6%B3%E8%AE%B0/" data-id="ck4mr72hf00006kv5bjy7hfs4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/28/%E6%88%91%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%B6%B3%E8%AE%B0/" data-id="ck4mr72hf00006kv5bjy7hfs4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,7 +129,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="git常用指令总结"><a href="#git常用指令总结" class="headerlink" title="git常用指令总结"></a>git常用指令总结</h1><h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><ol>
+        <h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><ol>
 <li><p>克隆远程版本库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> <span class="string">"url"</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -188,53 +181,77 @@
 </li>
 </ol>
 <h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><ol>
-<li>撤销工作目录中所有未提交文件的修改内容<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></li>
+<li><p>撤销工作目录中所有未提交文件的修改内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>撤销指定的未提交文件的修改内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout HEAD &lt;file&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>撤销指定的提交</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git revert &lt;commit&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="分支与标签"><a href="#分支与标签" class="headerlink" title="分支与标签"></a>分支与标签</h2><ol>
+<li><p>显示所有本地分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>切换到指定的分支或标签</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;branch/tag&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建新分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;new-branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除本地指定分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列出所有本地标签</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>基于最新提交创建标签</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag &lt;tagname&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除标签</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -d &lt;tagname&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="合并与衍合"><a href="#合并与衍合" class="headerlink" title="合并与衍合"></a>合并与衍合</h2><ol>
+<li><p>合并指定分支到当前分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git marge &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>衍合指定分支到当前分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="远程操作"><a href="#远程操作" class="headerlink" title="远程操作"></a>远程操作</h2></li>
+<li><p>查看远程版本库信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看指定远程版本库信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote show &lt;remote&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加远程版本库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add &lt;remote&gt; &lt;url&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从远程库获取代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch &lt;remote&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载代码及快速合并</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull &lt;remote&gt; &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上传代码及快速合并</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push &lt;remote&gt; &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除远程分支或标签</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push &lt;remote&gt; :&lt;branch/tag-name&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上传所有标签</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --tags</span><br></pre></td></tr></table></figure></li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
       <a data-url="http://yoursite.com/2019/12/27/2020-1-21-1/" data-id="ck5nys2nt0000osv5av3u200h" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-我的足记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/26/%E6%88%91%E7%9A%84%E8%B6%B3%E8%AE%B0/" class="article-date">
-  <time datetime="2019-12-26T13:00:21.000Z" itemprop="datePublished">2019-12-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/26/%E6%88%91%E7%9A%84%E8%B6%B3%E8%AE%B0/">我的足记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>最近什么也没干，天气还不错，就是风太大，手头有点紧</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">"第一篇自制博客"</span>)</span><br></pre></td></tr></table></figure>
-<h1 id="这是一个标题"><a href="#这是一个标题" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-1"><a href="#这是一个标题-1" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-2"><a href="#这是一个标题-2" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-3"><a href="#这是一个标题-3" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-4"><a href="#这是一个标题-4" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-5"><a href="#这是一个标题-5" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-6"><a href="#这是一个标题-6" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-7"><a href="#这是一个标题-7" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-8"><a href="#这是一个标题-8" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-9"><a href="#这是一个标题-9" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-10"><a href="#这是一个标题-10" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-11"><a href="#这是一个标题-11" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-12"><a href="#这是一个标题-12" class="headerlink" title="这是一个标题"></a>这是一个标题</h1><h1 id="这是一个标题-13"><a href="#这是一个标题-13" class="headerlink" title="这是一个标题"></a>这是一个标题</h1>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/26/%E6%88%91%E7%9A%84%E8%B6%B3%E8%AE%B0/" data-id="ck4mqumvp0001w8v5dr8260po" class="article-share-link">Share</a>
       
       
     </footer>
@@ -258,7 +275,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/26/hello-world/">Hello World</a>
+      <a class="article-title" href="/2019/12/26/hello-world/">官方文档</a>
     </h1>
   
 
@@ -267,16 +284,16 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="创建新帖子"><a href="#创建新帖子" class="headerlink" title="创建新帖子"></a>创建新帖子</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="运行服务器"><a href="#运行服务器" class="headerlink" title="运行服务器"></a>运行服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
@@ -284,6 +301,45 @@
     </div>
     <footer class="article-footer">
       <a data-url="http://yoursite.com/2019/12/26/hello-world/" data-id="ck4mqpf470000w8v5hlj96j87" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-我的足记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/26/%E6%88%91%E7%9A%84%E8%B6%B3%E8%AE%B0/" class="article-date">
+  <time datetime="2019-08-26T13:00:21.000Z" itemprop="datePublished">2019-08-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/26/%E6%88%91%E7%9A%84%E8%B6%B3%E8%AE%B0/">我的足记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>最近什么也没干，天气还不错，就是风太大，手头有点紧</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/26/%E6%88%91%E7%9A%84%E8%B6%B3%E8%AE%B0/" data-id="ck4mqumvp0001w8v5dr8260po" class="article-share-link">Share</a>
       
       
     </footer>
@@ -311,7 +367,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li></ul>
     </div>
   </div>
 
@@ -324,7 +380,7 @@
       <ul>
         
           <li>
-            <a href="/2019/12/27/%E6%88%91%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%B6%B3%E8%AE%B0/">我的另一个足记</a>
+            <a href="/2019/12/28/%E6%88%91%E7%9A%84%E5%8F%A6%E4%B8%80%E4%B8%AA%E8%B6%B3%E8%AE%B0/">自制博客常用命令总结</a>
           </li>
         
           <li>
@@ -332,11 +388,11 @@
           </li>
         
           <li>
-            <a href="/2019/12/26/%E6%88%91%E7%9A%84%E8%B6%B3%E8%AE%B0/">我的足记</a>
+            <a href="/2019/12/26/hello-world/">官方文档</a>
           </li>
         
           <li>
-            <a href="/2019/12/26/hello-world/">Hello World</a>
+            <a href="/2019/08/26/%E6%88%91%E7%9A%84%E8%B6%B3%E8%AE%B0/">我的足记</a>
           </li>
         
       </ul>
