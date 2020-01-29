@@ -128,7 +128,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/27/2020-1-21-1/">我的另一个足记</a>
+      <a class="article-title" href="/2019/12/27/2020-1-21-1/">git常用指令总结</a>
     </h1>
   
 
@@ -136,20 +136,60 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="git常用指令总结"><a href="#git常用指令总结" class="headerlink" title="git常用指令总结"></a>git常用指令总结</h1><h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><!-- ### 克隆远程版本库 -->
+        <h1 id="git常用指令总结"><a href="#git常用指令总结" class="headerlink" title="git常用指令总结"></a>git常用指令总结</h1><h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><ol>
+<li><p>克隆远程版本库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> <span class="string">"url"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化本地版本库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>克隆远程版本库</p>
-<blockquote>
-<p>git clone <url></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>克隆远程版本库</p>
-<blockquote>
-<p>git clone <url></p>
-</blockquote>
-</blockquote>
+</li>
+</ol>
+<h2 id="修改和提交"><a href="#修改和提交" class="headerlink" title="修改和提交"></a>修改和提交</h2><ol>
+<li><p>查看状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看变更内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>跟踪所有改动过的文件（存入本地暂存区）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>跟踪指定的文件（存入本地暂存区）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;file&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文件改名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git mv &lt;old&gt;&lt;new&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm &lt;file&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>停止跟踪文件但不删除</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;file&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提交所有更新过的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"commit message"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改最后一次提交</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a>查看提交历史</h2><ol>
+<li><p>初始化本地版本库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看指定文件的提交历史</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> -p &lt;file&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>以列表方式查看指定文件的提交历史</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git blame &lt;file&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><ol>
+<li>撤销工作目录中所有未提交文件的修改内容<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></li>
+</ol>
 
       
     </div>
@@ -288,7 +328,7 @@
           </li>
         
           <li>
-            <a href="/2019/12/27/2020-1-21-1/">我的另一个足记</a>
+            <a href="/2019/12/27/2020-1-21-1/">git常用指令总结</a>
           </li>
         
           <li>
